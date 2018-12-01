@@ -1,0 +1,16 @@
+server:
+  port: 5080
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Not-a-professional/myspringcloudconfig # 远程仓库地址
+          search-paths: /**
+      label: master # 远程仓库的分支
+  application:
+    name: configserver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:2080/eureka
