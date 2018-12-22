@@ -10,7 +10,18 @@ spring:
       label: master # 远程仓库的分支
   application:
     name: configserver
+  rabbitmq:
+      host: 106.12.19.58
+      port: 5672
+      username: admin
+      password: admin
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:2080/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh #SpringBoot2.0后Config客户端自动刷新时没有/actuator/bus-refresh节点，需要配置
+                             #请求路径为localhost:5080/actuator/bus-refresh
