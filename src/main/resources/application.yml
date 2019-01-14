@@ -18,7 +18,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:2080/eureka
+      defaultZone: http://liwei:wwwliwei001com@localhost:2080/eureka
 management:
   endpoints:
     web:
